@@ -141,7 +141,7 @@
 
         const queryParam = getQueryParam('query');
         if (queryParam) performSearch(queryParam);
-        if (!queryParam) {
+        if (queryParam = "") {
             window.location.href = 'https://pfm-search.sytes.net/'
         }
     </script>
