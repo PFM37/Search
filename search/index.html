@@ -133,7 +133,9 @@
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    resultsDiv.innerHTML = `<h1>There was an error. Try reloading the page or <a href="https://forms.gle/xgDmVGgJ1PJAQyJp6">report</a></h1>`;
+                    resultsDiv.innerHTML = `
+                    <h1>There was an error. Try reloading the page or <a href="https://forms.gle/xgDmVGgJ1PJAQyJp6">report</a></h1>
+                    `;
                 });
         }
 
