@@ -122,6 +122,9 @@
                     data.forEach(result => {
                         const card = document.createElement('div');
                         card.classList.add('result-card');
+                        // Example usage:
+                        const websiteUrl = result.link;
+                        const faviconUrl = getFavicon(websiteUrl);
                         card.innerHTML = `
                             <img src='${faviconUrl}'>
                             <h5><a href="${result.link}" target="_blank">${result.title}</a></h5>
@@ -132,11 +135,6 @@
                         function getFavicon(url) {
                             return `https://www.google.com/s2/favicons?sz=64&domain=${new URL(url).hostname}`;
                         }
-                        
-                        // Example usage:
-                        const websiteUrl = result;
-                        const faviconUrl = getFavicon(websiteUrl);
-                        console.log(faviconUrl);
                                         });
                 })
                 .catch(error => {
