@@ -16,12 +16,12 @@
         }
         .search-container {
             width: 100%;
-            height: 100vh;
+            height: 100px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            justify-content: center;
+            justify-content: flex-start;
             background-color: #fff;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
@@ -141,6 +141,9 @@
 
         const queryParam = getQueryParam('query');
         if (queryParam) performSearch(queryParam);
+        if (!queryParam) {
+            window.location.href = 'https://pfm-search.sytes.net/'
+        }
     </script>
     <script>
       document.getElementById("search-btn").addEventListener("click", function() {
