@@ -9,13 +9,14 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
+            height: 100vh;
+            max-height: 1000000000vh;
             font-family: 'Arial', sans-serif;
             background-color: #f4f6f9;
         }
         .search-container {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -99,7 +100,7 @@
         function performSearch(query) {
             if (!query) return;
             document.getElementById('searchQuery').value = query;
-            
+
 
             fetch(`https://search-engine-backend-2ra9.onrender.com/search?query=${encodeURIComponent(query)}`)
                 .then(response => response.json())
@@ -155,7 +156,7 @@
       function searchQuery() {
           let query = document.getElementById("search-input").value.trim();
           if (query !== "") {
-              window.location.href = "/search/?q=" + encodeURIComponent(query);
+              window.location.href = "https://pfm-search.sytes.net/search/?q=" + encodeURIComponent(query);
           }
       }
       </script>      
