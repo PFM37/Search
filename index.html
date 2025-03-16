@@ -95,7 +95,7 @@
         document.getElementById("searchForm").addEventListener("keypress", function(event) {
             event.preventDefault();
             if (event.key === 'Enter') {
-                let query = document.getElementById("query").value;
+                let query = document.getElementById("searchQuery").value.trim();
                 window.location.href = `https://pfm-search.sytes.net/search?q=${encodeURIComponent(query)}`;
             }
         });
