@@ -123,9 +123,9 @@
                         const card = document.createElement('div');
                         card.classList.add('result-card');
                         card.innerHTML = `
-                            <img src=''>
+                            <img src='${result.favicon}'>
                             <h5><a href="${result.link}" target="_blank">${result.title}</a></h5>
-                            <p>${result.description}</p>
+                            <a href'${result.link}'><p>${result.description}</p></a>
                             <p><a href="${result.link}" target="_blank">${result.link}</a></p>
                         `;
                         resultsDiv.appendChild(card);
