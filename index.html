@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,6 +99,7 @@
         function performSearch(query) {
             if (!query) return;
             document.getElementById('searchQuery').value = query;
+            
 
             fetch(`https://search-engine-backend-2ra9.onrender.com/search?query=${encodeURIComponent(query)}`)
                 .then(response => response.json())
@@ -155,7 +155,7 @@
       function searchQuery() {
           let query = document.getElementById("search-input").value.trim();
           if (query !== "") {
-              window.location.href = "/search?q=" + encodeURIComponent(query);
+              window.location.href = "/search/?q=" + encodeURIComponent(query);
           }
       }
       </script>      
