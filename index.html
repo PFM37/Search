@@ -72,23 +72,7 @@
         .result-card a:hover {
             text-decoration: underline;
         }
-        @media (min-width: 500px) {
-            .logo {
-                display: none;
-            }
-        }
     </style>
-    <script>
-        function setBodyMaxWidth() {
-            document.body.style.maxWidth = `${Math.min(window.innerWidth, 500)}px`;
-        }
-
-        // Run on page load
-        setBodyMaxWidth();
-
-        // Update on resize
-        window.addEventListener("resize", setBodyMaxWidth);
-    </script>
 </head>
 <body>
     <div class="search-container">
@@ -110,7 +94,7 @@
     </div>
 
     <script>
-        document.getElementById("searchForm").addEventListener("keypress", function(event) {
+        document.getElementById("searchQuery").addEventListener("keypress", function(event) {
             event.preventDefault();
             if (event.key === 'Enter') {
                 let query = document.getElementById("searchQuery").value.trim();

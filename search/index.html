@@ -74,6 +74,11 @@
         .result-card a:hover {
             text-decoration: underline;
         }
+        @media (max-width: 500px) {
+            .logo {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -155,7 +160,7 @@
         const queryParam = getQueryParam('query');
         if (queryParam) performSearch(queryParam);
       
-      document.getElementById("search-input").addEventListener("keypress", function(event) {
+      document.getElementById("searchQuery").addEventListener("keypress", function(event) {
           if (event.key === "Enter") {
               searchQuery();
           }
