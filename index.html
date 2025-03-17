@@ -78,6 +78,17 @@
             }
         }
     </style>
+    <script>
+        function setBodyMaxWidth() {
+            document.body.style.maxWidth = `${Math.min(window.innerWidth, 940)}px`;
+        }
+
+        // Run on page load
+        setBodyMaxWidth();
+
+        // Update on resize
+        window.addEventListener("resize", setBodyMaxWidth);
+    </script>
 </head>
 <body>
     <div class="search-container">
