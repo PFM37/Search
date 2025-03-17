@@ -122,10 +122,10 @@
                         const websiteUrl = result.link;
                         const faviconUrl = getFavicon(websiteUrl);
                         card.innerHTML = `
-                        <a href="${result.link}" target="_blank">
+                        <a href="${result.link}">
                             <img src='${faviconUrl}'>
                             <h5>${result.title}</a></h5>
-                            <p>${result.description}</p>
+                            <a href="${result.link}"><p>${result.description}</p></a>
                         </a>
                         `;
                         resultsDiv.appendChild(card);
