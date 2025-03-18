@@ -7,7 +7,7 @@ function checkHighScore() {
     console.log(localStorage.getItem('highScore'))
 }
 
-checkHightScore()
+checkHighScore()
 
 (function () {
     'use strict';
