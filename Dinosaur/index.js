@@ -2,6 +2,13 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
+
+function checkHighScore() {
+    console.log(localStorage.getItem('highScore'))
+}
+
+checkHightScore()
+
 (function () {
     'use strict';
     /**
@@ -800,6 +807,7 @@
             if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
+                localStorage.setItem("highScore", this.highestScore)
             }
 
             // Reset the time clock.
