@@ -95,6 +95,9 @@
     </div>
 
     <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/service-worker.js");
+        }
         document.getElementById("searchQuery").addEventListener("keypress", function(event) {
             event.preventDefault();
             if (event.key === 'Enter') {
